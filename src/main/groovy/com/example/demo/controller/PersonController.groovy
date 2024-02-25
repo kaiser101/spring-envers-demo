@@ -16,7 +16,7 @@ class PersonController {
 
     @GetMapping("/{id}")
     Person getPersonById(@PathVariable("id") Integer id) {
-        personRepository.findById(id)
+        personRepository.findById(id).get()
     }
 
     @GetMapping("/")
